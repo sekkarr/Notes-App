@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f1de;
+  color: #8ab2a6;
+}
+
+header {
+  background-color: #3e3f5b;
+  color: #f6f1de;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #8ab2a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6c9286;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.note {
+  background-color: #3e3f5b;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.note:hover {
+  background-color: #66689b;
+  transform: translateY(-10px);
+}
+
+.note h3 {
+  color: #acd3a8;
+  margin: 0;
+}
+.note p {
+  color: #f6f1de;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+app-bar {
+  display: block;
+  background-color: #3e3f5b;
+  color: #f6f1de;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+note-item {
+  display: block;
+  background-color: #3e3f5b;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+note-item:hover {
+  background-color: #66689b;
+}
+
+note-item[highlight="true"] {
+  background-color: #66689b;
+  border: 2px solid #8ab2a6;
+}
+
+.notification {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #8ab2a6;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
